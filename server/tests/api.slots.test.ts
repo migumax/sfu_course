@@ -93,7 +93,7 @@ describe('GET /api/slots', () => {
       url: `/api/slots?activity_id=${activity.id}`,
     });
     expect(response.statusCode).toBe(422);
-    expect(response.json().code).toBe('validation_failed');
+    expect(response.json().code).toBe('validation_fail');
   });
 
   it('отклоняет дату в неверном формате', async () => {
